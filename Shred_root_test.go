@@ -5,9 +5,9 @@ import (
 )
 
 func Test_root_Shred(t *testing.T) {
-	// A typical file that the user has access to.
+	// A file that the user doesnot own.
 	err := Shred("rootfile")
 	if err != nil {
-		t.Error("Got an error during test", err)
+		t.Error("Got an error during root test", err)
 	}
 }
